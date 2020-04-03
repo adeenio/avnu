@@ -1,7 +1,7 @@
 {
   "name": "avnu",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "## Project setup ``` npm install ```",
   "author": "adeenio",
   "scripts": {
@@ -57,6 +57,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "adeenio"
+    "url": "https://github.com/adeenio/avnu"
   }
 }
