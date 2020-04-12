@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <v-content>
       <v-container
         class="fill-height"
         fluid
@@ -14,7 +13,7 @@
             sm="8"
             md="4"
           >
-            <v-card shaped :loading="loading">
+            <v-card :loading="loading">
 
               <v-toolbar
                 color="indigo"
@@ -76,7 +75,7 @@
             placeholder="email"
           ></v-text-field>
           <span class="caption grey--text text--darken-1">
-            This is the email you will use to login to your Vuetify account
+            This is the email you will use to login to your avnu account
           </span>
         </v-card-text>
       </v-window-item>
@@ -105,7 +104,7 @@
             height="128"
             src="https://cdn.vuetifyjs.com/images/logos/v.svg"
           ></v-img>
-          <h3 class="title font-weight-light mb-2">Welcome to Vuetify</h3>
+          <h3 class="title font-weight-light mb-2">Welcome to avnu</h3>
           <span class="caption grey--text">Thanks for signing up!</span>
         </div>
       </v-window-item>
@@ -135,12 +134,13 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-content>
   </v-app>
 </template>
 
 <script>
   export default {
+  name: 'logIn',
+
     data: () => ({
     loading: false,
     step: 0,

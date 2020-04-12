@@ -10,6 +10,8 @@
         </v-list-item-content>
       </v-col>
 
+      <List/>
+
       <v-divider></v-divider>
 
       <v-list dense>
@@ -32,19 +34,13 @@
 </template>
 
 <script>
-import dash from '@/components/dash';
 import List from '@/components/layout/List';
-import Settings from '@/components/Settings';
 
 export default {
   name: 'User',
 
   components: {
-    dash,
     List,
-    logForm,
-    Settings,
-
   },
 
   data () {

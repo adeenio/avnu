@@ -6,7 +6,8 @@
       app
       clipped
     >
-    
+    <List/>
+
     </v-navigation-drawer>
 
      <v-app-bar
@@ -65,7 +66,6 @@ export default {
   data () {
       return {
         drawer: null,
-        items: 
       }
     },
    }

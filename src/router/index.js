@@ -1,49 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import logIn from '../views/logIn.vue'
 import Home from '../views/Home.vue'
-import page from '../views/Page.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/page/:id', component: page, props: 'true',
+  { path: '/home/:id', component: Home,
     children: [
         {
           // UserProfile will be rendered inside User's <router-view>
-          // when /user/:id/profile is matched
-          path: '/page',
+          // when /:id/home is matched
+          path: '/home',
         },
         {
-          path: '',
+          path: '/about',
         }
       ],
   },
-  {
-    path: '/home',
-    name: 'Manage',
-    //require auth
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
 	{
-    path: '/login',
-    name: 'login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/layout/logIn')
-  }                                                                                                              
+		path: '/login',
+		name: 'login',
+		component: logIn,
+	},
+
+	{
+		path: '/manage',
+		name: 'manage',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		// require auth
+		component: () => import(/* webpackChunkName: "manage" */ '../views/Manage.vue')
+
+	},
 ]
 
 const router = new VueRouter({
-  routes
+	mode: "history",
+	base: process.env.BASE_URL,
+	routes
 })
 
 export default router
