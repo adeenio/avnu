@@ -2,11 +2,11 @@
   <v-app>
       <v-col align="center">
         <v-avatar size="100">
-          <v-img src="https://randomuser.me/api/portraits/women/78.jpg"></v-img>
+          <v-img src="https://findicons.com/files/icons/1024/dress_it_profession/128/designer_avatar.png"></v-img>
         </v-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>Joan Leider</v-list-item-title>
+          <v-list-item-title>Adeenio .</v-list-item-title>
         </v-list-item-content>
       </v-col>
 
